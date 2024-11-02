@@ -4,10 +4,10 @@ metadata:
   name: postgres-volume
   namespace: cnpg-system
 spec:
-  storageClassName: nfs-k8s-keep
+  storageClassName: longhorn
   accessModes:
     - ReadWriteMany
   resources:
     requests:
       storage: 5Gi
----
+--- 
