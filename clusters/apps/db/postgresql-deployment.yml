@@ -21,7 +21,7 @@ spec:
             - containerPort: 5432
               protocol: TCP
           volumeMounts:
-            - name: postgres-volume-pvc
+            - name: postgres-volume
               mountPath: /var/lib/postgresql/data
           env:
             - name: PGDATA
@@ -34,6 +34,6 @@ spec:
                   name: postgres-secret
                   key: db_password
       volumes:
-        - name: postgres-volume-pvc
+        - name: postgres-volume
           persistentVolumeClaim:
-            claimName: postgres-volume-pvc
+            claimName: postgres-volume
