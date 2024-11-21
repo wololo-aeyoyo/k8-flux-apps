@@ -8,8 +8,7 @@ metadata:
     kubernetes.io/ingress.class: traefik-external
 spec:
   entryPoints:
-  - tcpep:
-      address: ":5432"
+    - websecure
   routes:
     - match: Host(`www.postgres.local.wololoaeyoyo.com`)
       kind: Rule
