@@ -13,12 +13,12 @@ spec:
     - match: Host(`www.capacitor.local.wololoaeyoyo.com`)
       kind: Rule
       services:
-        - name: capacitor
+        - name: capacitor-ingress
           port: 9000
     - match: Host(`capacitor.local.wololoaeyoyo.com`)
       kind: Rule
       services:
-        - name: capacitor
+        - name: capacitor-ingress
           port: 9000
   tls:
     secretName: local-wololoaeyoyo-com-tls
