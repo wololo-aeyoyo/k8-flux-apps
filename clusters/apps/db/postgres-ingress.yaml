@@ -1,0 +1,25 @@
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: postgres-ingress
+  namespace: cnpg-system
+  annotations: 
+    kubernetes.io/ingress.class: traefik-external
+spec:
+  entryPoints:
+  tcpep:
+    address: ":3179"
+  routes:
+    - match: Host(`www.postgres.local.wololoaeyoyo.com`)
+      kind: Rule
+      services:
+        - name: cnpg-system
+          port: 5432
+    - match: Host(`postgres.local.wololoaeyoyo.com`)
+      kind: Rule
+      services:
+        - name: cnpg-system
+          port: 5432
+  tls:
+    secretName: local-wololoaeyoyo-com-tls
