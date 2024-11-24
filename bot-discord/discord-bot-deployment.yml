@@ -32,8 +32,8 @@ spec:
             - name: TOKEN
               valueFrom:
                 secretKeyRef:
-                  name: postgres-secret
-                  key: db_password
+                  name: token-discord
+                  key: token
           image: harshraj9812/hr-bot-jmusicbot:0.3.9
           name: discord-hr-music-bot
       restartPolicy: Always
