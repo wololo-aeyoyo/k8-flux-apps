@@ -6,10 +6,11 @@ metadata:
  namespace: default
 
 spec:
- type: LoadBalancer
  selector:
  app: raffle-nest-backend
  ports:
- — protocol: TCP
- port: 80
- targetPort: 3000
+  protocol: TCP
+  port: 3000
+  targetPort: 3000
+
+
