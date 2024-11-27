@@ -48,3 +48,5 @@ spec:
           name: raffle-nest-backend
           ports:
             containerPort: 3000
+            protocol: TCP
+            
