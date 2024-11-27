@@ -4,13 +4,12 @@ kind: Service
 metadata:
  name: raffle-nest-backend-service
  namespace: default
-
 spec:
  selector:
- app: raffle-nest-backend-deployment
+  app: raffle-nest-backend-deployment
  ports:
-  protocol: TCP
-  port: 3000
-  targetPort: 3000
+  - port: 3000
+    targetPort: 3000
+    protocol: TCP
 
 
