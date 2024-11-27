@@ -44,7 +44,7 @@ spec:
                 secretKeyRef:
                   name: api-key-telegram
                   key: api  
-          — name: raffle-nest-backend
           image: wololoaeyoyo/raffle-nest-backend:latest
+          name: raffle-nest-backend
           ports:
-          — containerPort: 3000
+            containerPort: 3000
