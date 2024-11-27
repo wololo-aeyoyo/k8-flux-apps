@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+ name: raffle-nest-backend-service
+ namespace: default
+
+spec:
+ type: LoadBalancer
+ selector:
+ app: raffle-nest-backend
+ ports:
+ — protocol: TCP
+ port: 80
+ targetPort: 3000
