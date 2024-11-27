@@ -7,10 +7,10 @@ metadata:
 
 spec:
  selector:
- app: raffle-nest-backend
+ app: raffle-nest-backend-deployment
  ports:
   protocol: TCP
-  port: 3000
+  port:
   targetPort: 3000
 
 
