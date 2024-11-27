@@ -7,12 +7,12 @@ metadata:
 spec:
  replicas: 1
  selector:
- matchLabels:
- app: raffle-nest-backend
+  matchLabels:
+    app: raffle-nest-backend
  template:
- metadata:
- labels:
-  app: raffle-nest-backend
+  metadata:
+    labels:
+      app: raffle-nest-backend
  spec:
  containers:
  - env:
