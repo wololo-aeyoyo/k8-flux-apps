@@ -14,36 +14,36 @@ spec:
       labels:
         app: raffle-nest-backend
     spec:
-    containers:
-      - env:
-          - name: DB_NAME
-            value: 'raffle'
-          - name: HOST_DB
-            value: 10.42.4.43
-          - name: PORT_DB
-            value: 5432
-          - name: USER_DB
-            value: 'admin'
-          - name: PASSWORD_DB
-            valueFrom:
-              secretKeyRef:
-                name: password-db
-                key: password
-          - name: SECRET_KEY
-            valueFrom:
-              secretKeyRef:
-                name: secret-key-raffle
-                key: secret
-          - name: AUTHORIZATION_HEADER
-            valueFrom:
-              secretKeyRef:
-                name: auth-head-raffle
-                key: auth
-          - name: API_KEY_TELEGRAM
-            valueFrom:
-              secretKeyRef:
-                name: api-key-telegram
-                key: api  
+      containers:
+        - env:
+            - name: DB_NAME
+              value: 'raffle'
+            - name: HOST_DB
+              value: 10.42.4.43
+            - name: PORT_DB
+              value: 5432
+            - name: USER_DB
+              value: 'admin'
+            - name: PASSWORD_DB
+              valueFrom:
+                secretKeyRef:
+                  name: password-db
+                  key: password
+            - name: SECRET_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: secret-key-raffle
+                  key: secret
+            - name: AUTHORIZATION_HEADER
+              valueFrom:
+                secretKeyRef:
+                  name: auth-head-raffle
+                  key: auth
+            - name: API_KEY_TELEGRAM
+              valueFrom:
+                secretKeyRef:
+                  name: api-key-telegram
+                  key: api  
     — name: raffle-nest-backend
     image: wololoaeyoyo/raffle-nest-backend:latest
     ports:
