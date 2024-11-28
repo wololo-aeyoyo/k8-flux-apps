@@ -15,7 +15,6 @@ spec:
     spec:
       containers:
         - name: raffle-nest-backend
-          image: wololoaeyoyo/raffle-nest-backend:latest
         - env:
             - name: DB_NAME
               value: 'raffle'
@@ -49,5 +48,7 @@ spec:
               - containerPort: 4000
                 protocol: TCP
               - name: raffle-nest-backend 
+                image: wololoaeyoyo/raffle-nest-backend:latest
+
 
             
