@@ -47,6 +47,7 @@ spec:
                   key: api 
               ports:
               - containerPort: 4000
-                protocol: TCP 
+                protocol: TCP
+              - name: raffle-nest-backend 
 
             
