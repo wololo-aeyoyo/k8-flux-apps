@@ -8,8 +8,8 @@ spec:
  selector:
   app: raffle-nest-backend-deployment
  ports:
-  - port: 3000
-    targetPort: 3000
+  - port: 4000
+    targetPort: 4000
     protocol: TCP
 
 
