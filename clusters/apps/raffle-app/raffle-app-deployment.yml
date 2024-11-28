@@ -16,9 +16,6 @@ spec:
       containers:
         - name: raffle-nest-backend
           image: wololoaeyoyo/raffle-nest-backend:latest
-          ports:
-            containerPort: 4000
-            protocol: TCP
         - env:
             - name: DB_NAME
               value: 'raffle'
@@ -47,6 +44,9 @@ spec:
               valueFrom:
                 secretKeyRef:
                   name: api-key-telegram
-                  key: api  
+                  key: api 
+              ports:
+              - containerPort: 4000
+                protocol: TCP 
 
             
