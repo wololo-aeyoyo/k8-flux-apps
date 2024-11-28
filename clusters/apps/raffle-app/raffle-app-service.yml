@@ -6,7 +6,7 @@ metadata:
  namespace: default
 spec:
  selector:
-  app: raffle-nest-backend-deployment
+  app: raffle-nest-backend
  ports:
   - port: 3000
     targetPort: 3000
