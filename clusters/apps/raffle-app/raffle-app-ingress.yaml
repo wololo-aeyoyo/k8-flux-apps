@@ -18,7 +18,7 @@ spec:
     - match: Host(`raffle.local.wololoaeyoyo.com`)
       kind: Rule
       services:
-        - name: rraffle-nest-backend-service
+        - name: raffle-nest-backend-service
           port: 3000
   tls:
     secretName: local-wololoaeyoyo-com-tls
