@@ -42,7 +42,7 @@ spec:
             - name: REPLACE_ENV_VARIABLES
               value: "true"
             - name: TYPE
-              value: VELOCITY
+              value: PAPER
           image: itzg/minecraft-server
           name: minecraft
           ports:
