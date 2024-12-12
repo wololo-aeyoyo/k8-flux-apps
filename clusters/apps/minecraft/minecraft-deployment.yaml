@@ -25,6 +25,10 @@ spec:
     spec:
       containers:
         - env:
+            - name: EULA
+              value: "TRUE"
+            - name: ONLINE_MODE
+              value: "FALSE"
             - name: BUNGEE_JAR_REVISION
               value: "1"
             - name: CFG_MOTD
@@ -51,6 +55,8 @@ spec:
               name: minecraft-claim0
             - mountPath: /server
               name: minecraft-data
+            - mountPath: /data
+              name: minecraft-data-vpc
       restartPolicy: Always
       volumes:
         - name: minecraft-claim0
@@ -59,3 +65,6 @@ spec:
         - name: minecraft-data
           persistentVolumeClaim:
             claimName: minecraft-data
+        - name: minecraft-data-vpc
+          persistentVolumeClaim:
+            claimName: minecraft-data-vpc
