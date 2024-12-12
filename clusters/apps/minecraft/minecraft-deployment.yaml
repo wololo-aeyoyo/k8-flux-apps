@@ -39,7 +39,7 @@ spec:
               value: "true"
             - name: TYPE
               value: VELOCITY
-          image: itzg/mc-minecraft
+          image: itzg/minecraft-server
           name: minecraft
           ports:
             - containerPort: 25565
