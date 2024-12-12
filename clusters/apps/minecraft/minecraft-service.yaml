@@ -18,5 +18,6 @@ spec:
       port: 19132
       protocol: UDP
       targetPort: 19132
+  type: LoadBalancer
   selector:
     io.kompose.service: minecraft
