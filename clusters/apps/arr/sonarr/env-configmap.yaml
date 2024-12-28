@@ -6,6 +6,7 @@ data:
   TZ: America/Chicago
 kind: ConfigMap
 metadata:
+  Namespace: arr-stack
   labels:
     io.kompose.service: sonarr-env
   name: env
