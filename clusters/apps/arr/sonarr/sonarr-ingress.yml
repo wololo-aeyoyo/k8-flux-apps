@@ -13,7 +13,7 @@ spec:
       match: Host(`local.wololoaeyoyo.com`)
       services:
         - name: sonarr 
-          port: 80
+          port: 8989
       middlewares:
         - name: default-headers
   tls:
