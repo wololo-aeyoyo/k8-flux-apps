@@ -3,6 +3,8 @@ kind: IngressRoute
 metadata:
   name: sonnar-route
   namespace: arr-stack
+  annotations: 
+    kubernetes.io/ingress.class: traefik-external
 spec:
   entryPoints:
     - web 
@@ -12,3 +14,4 @@ spec:
       services:
         - name: sonarr 
           port: 80
+          
