@@ -14,7 +14,5 @@ spec:
       services:
         - name: sonarr 
           port: 8989
-      middlewares:
-        - name: default-headers
   tls:
     secretName: local-wololoaeyoyo-com-tls
