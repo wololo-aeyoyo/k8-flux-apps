@@ -6,8 +6,9 @@ metadata:
     io.kompose.service: sonarr-claim0
   name: sonarr-claim0
 spec:
+  storageClassName: longhorn
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
   resources:
     requests:
       storage: 100Mi
@@ -20,8 +21,9 @@ metadata:
     io.kompose.service: sonarr-claim1
   name: sonarr-claim1
 spec:
+  storageClassName: longhorn
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
   resources:
     requests:
       storage: 100Mi
@@ -34,8 +36,9 @@ metadata:
     io.kompose.service: sonarr-claim2
   name: sonarr-claim2
 spec:
+  storageClassName: longhorn
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
   resources:
     requests:
       storage: 100Mi
@@ -48,8 +51,9 @@ metadata:
     io.kompose.service: sonarr-claim3
   name: sonarr-claim3
 spec:
+  storageClassName: longhorn
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
   resources:
     requests:
       storage: 100Mi
