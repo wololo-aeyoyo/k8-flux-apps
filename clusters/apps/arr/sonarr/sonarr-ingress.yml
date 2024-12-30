@@ -10,7 +10,7 @@ spec:
     - websecure 
   routes:
     - kind: Rule
-      match: Host(`local.wololoaeyoyo.com`)
+      match: Host(`sonarr.local.wololoaeyoyo.com`)
       services:
         - name: sonarr 
           port: 8989
