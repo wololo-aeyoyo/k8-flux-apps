@@ -10,5 +10,5 @@ spec:
     - kind: Rule
       match: Host(`local.wololoaeyoyo.com`)
       services:
-        - name: sonarr-svc 
+        - name: sonarr 
           port: 80
