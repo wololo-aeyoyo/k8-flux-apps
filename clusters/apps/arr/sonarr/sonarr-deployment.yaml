@@ -6,7 +6,7 @@ metadata:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  Namespace: arr-stack
+  namespace: arr-stack
   annotations:
     kompose.cmd: C:\kompose\kompose.exe convert
     kompose.version: 1.34.0 (cbf2835db)
@@ -34,22 +34,22 @@ spec:
               valueFrom:
                 configMapKeyRef:
                   key: ARRPATH
-                  name: env
+                  name: config-sonarr
             - name: PGID
               valueFrom:
                 configMapKeyRef:
                   key: PGID
-                  name: env
+                  name: config-sonarr
             - name: PUID
               valueFrom:
                 configMapKeyRef:
                   key: PUID
-                  name: env
+                  name: config-sonarr
             - name: TZ
               valueFrom:
                 configMapKeyRef:
                   key: TZ
-                  name: env
+                  name: config-sonarr
           image: linuxserver/sonarr:latest
           name: sonarr
           ports:

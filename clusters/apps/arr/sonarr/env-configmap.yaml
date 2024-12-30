@@ -4,7 +4,7 @@ metadata:
   namespace: arr-stack
   labels:
     io.kompose.service: sonarr-env
-  name: env
+  name: config-sonarr
 data:
   ARRPATH: /media/Arr/
   PGID: "1000"
