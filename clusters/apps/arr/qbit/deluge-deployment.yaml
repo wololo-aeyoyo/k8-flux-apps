@@ -1,6 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  namespace: arr-stack
   annotations:
     kompose.cmd: C:\kompose\kompose.exe convert -v
     kompose.version: 1.34.0 (cbf2835db)
