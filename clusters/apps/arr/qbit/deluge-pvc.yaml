@@ -16,6 +16,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
+  namespace: arr-stack
   labels:
     io.kompose.service: deluge-claim0
   name: deluge-claim0
