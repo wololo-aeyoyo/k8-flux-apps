@@ -36,6 +36,10 @@ spec:
             - name: WIREGUARD_ADDRESSES
               value: 10.135.77.77/32,fd7d:76ee:e68f:a993:e9ff:2a54:abc:a39f/128
             - name : WIREGUARD_PRESHARED_KEY
+            - name: FIREWALL_DEBUG
+              value: "on"
+            - name: FIREWALL_INPUT_PORTS
+              value: "8080"
               valueFrom:
                 secretKeyRef:
                   name: vpn-pre-shared
@@ -58,8 +62,7 @@ spec:
               protocol: TCP
           securityContext:
             capabilities:
-              add:
-                - NET_ADMIN
+              add: ["NET_ADMIN"]
           volumeMounts:
             - mountPath: /config
               name: gluetun-claim0
