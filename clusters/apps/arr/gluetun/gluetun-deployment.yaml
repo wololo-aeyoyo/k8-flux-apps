@@ -23,7 +23,7 @@ spec:
       labels:
         io.kompose.service: gluetun
     spec:
-      containers:
+      initContainers:
         - env:
             - name: SERVER_REGIONS
               value: Europe
@@ -63,6 +63,7 @@ spec:
           volumeMounts:
             - mountPath: /config
               name: gluetun-claim0
+      containers:
         - env:
             - name: DELUGE_LOGLEVEL
               value: error
@@ -73,13 +74,6 @@ spec:
             - name: TZ
               value: Etc/UTC
           image: lscr.io/linuxserver/deluge:latest
-          livenessProbe:
-            exec:
-              command:
-                - ping -c 1 www.google.com || exit 1
-            failureThreshold: 5
-            periodSeconds: 60
-            timeoutSeconds: 20
           name: deluge
           ports:
             - containerPort: 8112
