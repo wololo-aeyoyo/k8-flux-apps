@@ -35,6 +35,11 @@ spec:
               value: wireguard
             - name: WIREGUARD_ADDRESSES
               value: 10.135.77.77/32,fd7d:76ee:e68f:a993:e9ff:2a54:abc:a39f/128
+            - name : WIREGUARD_PRESHARED_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: vpn-pre-shared
+                  key: pre-secret
             - name: WIREGUARD_PRIVATE_KEY
               valueFrom:
                 secretKeyRef:
