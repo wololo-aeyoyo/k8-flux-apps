@@ -25,7 +25,7 @@ spec:
     spec:
       containers:
         - env:
-            - name: SERVER_COUNTRIES
+            - name: SERVER_REGIONS
               value: Europe
             - name: TZ
               value: America/Chicago
