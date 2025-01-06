@@ -45,6 +45,8 @@ spec:
                 secretKeyRef:
                   name: vpn-secret
                   key: wireguard
+            - name: DNS_ADDRESS
+              value: 10.128.0.1, fd7d:76ee:e68f:a993::1
           image: qmcgaw/gluetun:latest
           name: gluetun
           ports:
