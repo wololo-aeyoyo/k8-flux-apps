@@ -23,7 +23,7 @@ spec:
       labels:
         io.kompose.service: gluetun
     spec:
-      initContainers:
+      containers:
         - env:
             - name: SERVER_REGIONS
               value: Europe
@@ -66,7 +66,6 @@ spec:
           volumeMounts:
             - mountPath: /config
               name: gluetun-claim0
-      containers:
         - env:
             - name: DELUGE_LOGLEVEL
               value: error
