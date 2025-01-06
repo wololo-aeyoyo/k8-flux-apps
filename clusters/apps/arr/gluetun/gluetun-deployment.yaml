@@ -45,10 +45,6 @@ spec:
                 secretKeyRef:
                   name: vpn-secret
                   key: wireguard
-            - name: FIREWALL_DEBUG
-              value: "on"
-            - name: FIREWALL_INPUT_PORTS
-              value: "8080"
           image: qmcgaw/gluetun:latest
           name: gluetun
           ports:
