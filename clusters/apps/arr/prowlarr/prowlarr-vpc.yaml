@@ -1,6 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
+  namespace: arr-stack
   labels:
     io.kompose.service: prowlarr-claim0
   name: prowlarr-claim0
@@ -14,6 +15,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
+  namespace: arr-stack
   labels:
     io.kompose.service: prowlarr-claim1
   name: prowlarr-claim1
