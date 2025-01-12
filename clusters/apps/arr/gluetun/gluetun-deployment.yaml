@@ -9,7 +9,7 @@ metadata:
     io.kompose.service: gluetun
   name: gluetun
 spec:
-  replicas: 1
+  replicas: 0
   selector:
     matchLabels:
       io.kompose.service: gluetun
