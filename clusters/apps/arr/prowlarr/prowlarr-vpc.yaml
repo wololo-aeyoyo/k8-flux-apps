@@ -6,6 +6,7 @@ metadata:
     io.kompose.service: prowlarr-claim0
   name: prowlarr-claim0
 spec:
+  storageClassName: longhorn
   accessModes:
     - ReadWriteMany
   resources:
@@ -20,6 +21,7 @@ metadata:
     io.kompose.service: prowlarr-claim1
   name: prowlarr-claim1
 spec:
+  storageClassName: longhorn
   accessModes:
     - ReadWriteMany
   resources:
