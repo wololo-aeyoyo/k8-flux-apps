@@ -15,6 +15,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
+  namespace: arr-stack
   labels:
     io.kompose.service: radarr-claim1
   name: radarr-claim1
@@ -28,6 +29,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
+  namespace: arr-stack
   labels:
     io.kompose.service: radarr-claim2
   name: radarr-claim2
