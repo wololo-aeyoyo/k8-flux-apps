@@ -39,8 +39,8 @@ spec:
             - containerPort: 32400
               protocol: TCP
           volumeMounts:
-            - mountPath: /mnt
-              name: plex-claim0
+            - mountPath: /downloads
+              name: deluge-claim1
       restartPolicy: Always
       volumes:
         - name: plex-claim0

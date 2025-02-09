@@ -58,7 +58,7 @@ spec:
             - mountPath: /data/tvshows
               name: sonarr-claim2
             - mountPath: /downloads
-              name: sonarr-claim3
+              name: deluge-claim1
       hostname: sonarr
       restartPolicy: Always
       volumes:
