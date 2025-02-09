@@ -43,6 +43,6 @@ spec:
               name: deluge-claim1
       restartPolicy: Always
       volumes:
-        - name: plex-claim0
+        - name: deluge-claim1
           persistentVolumeClaim:
-            claimName: plex-claim0
+            claimName: deluge-claim1
