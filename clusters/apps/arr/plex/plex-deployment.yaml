@@ -39,7 +39,7 @@ spec:
             - containerPort: 32400
               protocol: TCP
           volumeMounts:
-            - mountPath: /
+            - mountPath: /etc
               name: plex-claim0
       restartPolicy: Always
       volumes:
