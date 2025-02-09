@@ -43,7 +43,7 @@ spec:
             - mountPath: /config
               name: radarr-claim1
             - mountPath: /data
-              name: radarr-claim2
+              name: deluge-claim1
       restartPolicy: Always
       volumes:
         - name: radarr-claim0
@@ -53,6 +53,6 @@ spec:
         - name: radarr-claim1
           persistentVolumeClaim:
             claimName: radarr-claim1
-        - name: radarr-claim2
+        - name: deluge-claim1
           persistentVolumeClaim:
-            claimName: radarr-claim2
+            claimName: deluge-claim1
