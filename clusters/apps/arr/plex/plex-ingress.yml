@@ -1,0 +1,18 @@
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: plex-route
+  namespace: arr-stack
+  annotations: 
+    kubernetes.io/ingress.class: traefik-external
+spec:
+  entryPoints:
+    - websecure 
+  routes:
+    - kind: Rule
+      match: Host(`plex.local.wololoaeyoyo.com`)
+      services:
+        - name: plex 
+          port: 32400
+  tls:
+    secretName: local-wololoaeyoyo-com-tls
