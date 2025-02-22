@@ -32,17 +32,12 @@ spec:
             - containerPort: 9696
               protocol: TCP
           volumeMounts:
-            - mountPath: /etc/localtime
-              name: prowlarr-claim0
-              readOnly: true
-            - mountPath: /config
-              name: prowlarr-claim1
+            - mountPath: /data/localtime #era etc
+              name: arr-claim0
+            - mountPath: /data
+              name: arr-claim0
       restartPolicy: Always
       volumes:
-        - name: prowlarr-claim0
+        - name: arr-claim0
           persistentVolumeClaim:
-            claimName: prowlarr-claim0
-            readOnly: true
-        - name: prowlarr-claim1
-          persistentVolumeClaim:
-            claimName: prowlarr-claim1
+            claimName: arr-claim0

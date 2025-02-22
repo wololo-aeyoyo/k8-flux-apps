@@ -51,26 +51,21 @@ spec:
             - containerPort: 8989
               protocol: TCP
           volumeMounts:
-            - mountPath: /config
-              name: sonarr-claim0
-            - mountPath: /data/Backup
-              name: sonarr-claim1
-            - mountPath: /data/tvshows
-              name: sonarr-claim2
-            - mountPath: /downloads
-              name: deluge-claim1
+            - mountPath: /data/config
+              name: arr-claim0
+            - mountPath: /data/downloads/Backup
+              name: arr-claim0
+            - mountPath: /data/downloads/tvshows
+              name: arr-claim0
+            - mountPath: /data/downloads
+              name: arr-claim0
       hostname: sonarr
       restartPolicy: Always
       volumes:
-        - name: sonarr-claim0
+        - name: arr-claim0
           persistentVolumeClaim:
-            claimName: sonarr-claim0
-        - name: sonarr-claim1
+            claimName: arr-claim0
+        - name: arr-claim0
           persistentVolumeClaim:
-            claimName: sonarr-claim1
-        - name: sonarr-claim2
-          persistentVolumeClaim:
-            claimName: sonarr-claim2
-        - name: deluge-claim1
-          persistentVolumeClaim:
-            claimName: deluge-claim1
+            claimName: arr-claim0
+

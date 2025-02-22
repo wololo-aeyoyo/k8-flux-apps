@@ -37,22 +37,15 @@ spec:
             - containerPort: 7878
               protocol: TCP
           volumeMounts:
-            - mountPath: /etc/localtime
-              name: radarr-claim0
-              readOnly: true
-            - mountPath: /config
-              name: radarr-claim1
-            - mountPath: /data
-              name: deluge-claim1
+            - mountPath: /data/localtime
+              name: arr-claim0
+            - mountPath: /data/downloads
+              name: arr-claim0
+
       restartPolicy: Always
       volumes:
-        - name: radarr-claim0
+        - name: arr-claim0
           persistentVolumeClaim:
-            claimName: radarr-claim0
-            readOnly: true
-        - name: radarr-claim1
-          persistentVolumeClaim:
-            claimName: radarr-claim1
-        - name: deluge-claim1
-          persistentVolumeClaim:
-            claimName: deluge-claim1
+            claimName: arr-claim0
+
+
