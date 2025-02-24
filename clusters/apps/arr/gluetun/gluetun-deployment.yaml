@@ -87,7 +87,7 @@ spec:
           volumeMounts:
             - mountPath: /data/config
               name: arr-claim0
-            - mountPath: /data/downloads/torrents
+            - mountPath: /data/downloads
               name: arr-claim0
       restartPolicy: Always
       volumes:
