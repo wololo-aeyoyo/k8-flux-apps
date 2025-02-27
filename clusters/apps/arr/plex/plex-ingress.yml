@@ -14,5 +14,10 @@ spec:
       services:
         - name: plex 
           port: 32400
+    - kind: Rule
+      match: Host(`plex-server.local.wololoaeyoyo.com`)
+      services:
+        - name: plex 
+          port: 32469
   tls:
     secretName: local-wololoaeyoyo-com-tls
