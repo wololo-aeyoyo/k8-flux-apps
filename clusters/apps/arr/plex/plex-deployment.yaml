@@ -38,6 +38,8 @@ spec:
           ports:
             - containerPort: 32400
               protocol: TCP
+            - containerPort: 1900 
+              protocol: UDP
           volumeMounts:
             - mountPath: /data/downloads:/
               name: arr-claim0
