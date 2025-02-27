@@ -39,7 +39,7 @@ spec:
             - containerPort: 32400
               protocol: TCP
           volumeMounts:
-            - mountPath: /data/downloads:/tv
+            - mountPath: /data:/
               name: arr-claim0
       restartPolicy: Always
       volumes:
