@@ -33,7 +33,7 @@ spec:
               value: America/Chicago
             - name: VERSION
               value: docker
-          image: lscr.io/linuxserver/plex:latest
+          image: plexinc/pms-docker:latest
           name: plex
           ports:
             - containerPort: 32400
