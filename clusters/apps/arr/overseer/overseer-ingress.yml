@@ -1,0 +1,18 @@
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  namespace: arr-stack
+  name: overseer-route
+  annotations: 
+    kubernetes.io/ingress.class: traefik-external
+spec:
+  entryPoints:
+    - websecure 
+  routes:
+    - kind: Rule
+      match: Host(`overseer.local.wololoaeyoyo.com`)
+      services:
+        - name: overseer 
+          port: 5055
+  tls:
+    secretName: local-wololoaeyoyo-com-tls
