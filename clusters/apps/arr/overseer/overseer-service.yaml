@@ -3,12 +3,12 @@ kind: Service
 metadata:
   namespace: arr-stack
   labels:
-    io.kompose.service: overseerr
-  name: overseerr
+    io.kompose.service: overseer
+  name: overseer
 spec:
   ports:
     - name: "5055"
       port: 5055
       targetPort: 5055
   selector:
-    io.kompose.service: overseerr
+    io.kompose.service: overseer
