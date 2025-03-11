@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  namespace: arr-stack
+  labels:
+    io.kompose.service: sonarr-env
+  name: config-sonarr
+data:
+  ARRPATH: /media/Arr/
+  PGID: "1000"
+  PUID: "1000"
+  TZ: America/Chicago
