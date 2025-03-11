@@ -3,19 +3,19 @@ kind: Deployment
 metadata:
   namespace: arr-stack
   labels:
-    io.kompose.service: overseer
-  name: overseer
+    io.kompose.service: overseerr
+  name: overseerr
 spec:
   replicas: 1
   selector:
     matchLabels:
-      io.kompose.service: overseer
+      io.kompose.service: overseerr
   strategy:
     type: Recreate
   template:
     metadata:
       labels:
-        io.kompose.service: overseer
+        io.kompose.service: overseerr
     spec:
       containers:
         - env:
@@ -25,13 +25,13 @@ spec:
               value: "1000"
             - name: TZ
               value: America/Chicago
-          image: lscr.io/linuxserver/overseer:latest
-          name: overseer
+          image: lscr.io/linuxserver/overseerr:latest
+          name: overseerr
           ports:
             - containerPort: 5055
               protocol: TCP
           volumeMounts:
-            - mountPath: /config/overseer
+            - mountPath: /config/overseerr
               name: arr-claim0
             - mountPath: /data/downloads
               name: arr-claim0
