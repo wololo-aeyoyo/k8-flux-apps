@@ -32,7 +32,7 @@ spec:
               protocol: TCP
           volumeMounts:
             - mountPath: /config
-              name: arr-claim0
+              name: arr-claim1
             - mountPath: /data/downloads
               name: arr-claim0
       restartPolicy: Always
