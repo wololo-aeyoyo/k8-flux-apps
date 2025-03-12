@@ -45,6 +45,8 @@ spec:
           volumeMounts:
             - mountPath: /data/downloads:/
               name: arr-claim0
+            - mountPath: /config
+              name: arr-claim0
       restartPolicy: Always
       volumes:
         - name: arr-claim0
