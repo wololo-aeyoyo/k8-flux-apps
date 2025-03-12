@@ -40,4 +40,7 @@ spec:
         - name: arr-claim0
           persistentVolumeClaim:
             claimName: arr-claim0
+        - name: arr-claim1
+          persistentVolumeClaim:
+            claimName: arr-claim1
 
