@@ -53,11 +53,11 @@ spec:
           volumeMounts:
             - mountPath: /data/config
               name: arr-claim0
-            - mountPath: /data/downloads/Backup
+            - mountPath: /data/downloads
               name: arr-claim0
             - mountPath: /data/downloads/tvshows
               name: arr-claim0
-            - mountPath: /data/downloads
+            - mountPath: /data/downloads/anime
               name: arr-claim0
       hostname: sonarr
       restartPolicy: Always

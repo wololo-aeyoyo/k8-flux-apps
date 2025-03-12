@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
   namespace: arr-stack
   labels:
@@ -32,7 +32,7 @@ spec:
             - containerPort: 9696
               protocol: TCP
           volumeMounts:
-            - mountPath: /data/localtime #era etc
+            - mountPath: /data/config
               name: arr-claim0
             - mountPath: /data
               name: arr-claim0
