@@ -31,7 +31,7 @@ spec:
             - containerPort: 5055
               protocol: TCP
           volumeMounts:
-            - mountPath: /config
+            - mountPath: /data/config
               name: arr-claim0
             - mountPath: /data/downloads
               name: arr-claim0
