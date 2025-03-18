@@ -40,3 +40,7 @@ spec:
         - name: ollama-claim0
           mountPath: /root/.ollama
         tty: true
+      volumes:
+        - name: ollama-claim0
+          persistentVolumeClaim:
+            claimName: ollama-claim0
