@@ -14,5 +14,6 @@ spec:
     - name: "27015"
       port: 27015
       targetPort: 27015
+  type: LoadBalancer
   selector:
     io.kompose.service: factorio
