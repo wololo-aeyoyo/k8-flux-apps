@@ -31,6 +31,8 @@ spec:
           volumeMounts:
             - mountPath: /factorio
               name: factorio-claim0
+        - nodeSelector:
+          disktype: ssd
       restartPolicy: Always
       volumes:
         - name: factorio-claim0
