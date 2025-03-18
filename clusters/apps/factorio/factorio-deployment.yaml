@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: default
+  labels:
+    io.kompose.service: factorio
+  name: factorio
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: factorio
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        io.kompose.service: factorio
+    spec:
+      containers:
+        - env:
+            - name: UPDATE_MODS_ON_START
+              value: "true"
+          image: factoriotools/factorio:stable
+          name: factorio
+          ports:
+            - containerPort: 34197
+              protocol: UDP
+            - containerPort: 27015
+              protocol: TCP
+          volumeMounts:
+            - mountPath: /factorio
+              name: factorio-claim0
+      restartPolicy: Always
+      volumes:
+        - name: factorio-claim0
+          persistentVolumeClaim:
+            claimName: factorio-claim0
