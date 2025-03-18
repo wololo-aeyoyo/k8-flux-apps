@@ -17,7 +17,6 @@ spec:
       labels:
         io.kompose.service: factorio
     spec:
-
       containers:
         - env:
             - name: UPDATE_MODS_ON_START
