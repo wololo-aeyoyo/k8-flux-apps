@@ -16,10 +16,11 @@ spec:
       containers:
       - env:
         - name: OLLAMA_API_BASE_URL
-          value: "http://ollama:11434/api/generate"
+          value: "http://ollama.local.wololoaeyoyo.com/"
         name: web-ui
         image: ghcr.io/open-webui/open-webui:main
         ports:
+        - name: http
           containerPort: 8080
           protocol: TCP
       nodeSelector:
