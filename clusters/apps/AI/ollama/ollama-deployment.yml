@@ -2,8 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   namespace: web-ui
-  labels:
-    io.kompose.service: ollama
   name: ollama
 spec:
   replicas: 1
@@ -48,6 +46,3 @@ spec:
 
 
 
-Deployment/web-ui/ollama dry-run failed (Invalid): Deployment.apps "ollama" is invalid: [spec.strategy.rollingUpdate:
- Forbidden: may not be specified when strategy `type` is 'Recreate', spec.selector: Invalid value: v1.LabelSelector{MatchLabels:map[string]
- string{"io.kompose.service":"ollama"}, MatchExpressions:[]v1.LabelSelectorRequirement(nil)}: field is immutable]
