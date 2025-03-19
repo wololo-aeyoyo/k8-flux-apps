@@ -10,6 +10,8 @@ spec:
   selector:
     matchLabels:
       io.kompose.service: ollama
+  strategy:
+    type: Recreate
   template:
     metadata:
       labels:
