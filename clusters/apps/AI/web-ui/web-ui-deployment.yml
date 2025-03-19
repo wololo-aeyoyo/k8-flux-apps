@@ -17,6 +17,8 @@ spec:
       - env:
         - name: OLLAMA_API_BASE_URL
           value: "http://ollama.local.wololoaeyoyo.com/"
+        - name: OLLAMA_BASE_URL
+          value: "http://ollama.local.wololoaeyoyo.com/"
         name: web-ui
         image: ghcr.io/open-webui/open-webui:main
         ports:
