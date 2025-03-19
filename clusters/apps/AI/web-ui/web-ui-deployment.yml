@@ -20,9 +20,9 @@ spec:
         - name: http
           containerPort: 8080
           protocol: TCP
-        - env:
-            - name: OLLAMA_API_BASE_URL
-              value: "http://ollama:11434/api"
+      - env:
+        - name: OLLAMA_API_BASE_URL
+          value: "http://ollama:11434/api"
       nodeSelector:
         webui: deepseek
       volumes:
