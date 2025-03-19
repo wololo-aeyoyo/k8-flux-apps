@@ -27,8 +27,6 @@ spec:
             cpu: "4000m"
             memory: "10Gi"
             nvidia.com/gpu: "0"
-        command: ["/bin/sh"]
-        args: [ "-c", "ollama serve && sleep 2 && ollama pull deepseek-r1:1.5b && tail -f /dev/null" ]
         volumeMounts:
         - name: ollama-claim0
           mountPath: /root/.ollama
