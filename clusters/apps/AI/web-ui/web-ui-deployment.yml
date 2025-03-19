@@ -14,7 +14,10 @@ spec:
         name: web-ui
     spec:
       containers:
-      - name: web-ui
+      - env:
+        - name: OLLAMA_API_BASE_URL
+          value: "http://ollama:11434/api"
+        name: web-ui
         image: ghcr.io/open-webui/open-webui:main
         ports:
         - name: http
