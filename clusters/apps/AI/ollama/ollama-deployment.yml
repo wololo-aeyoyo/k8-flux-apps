@@ -15,6 +15,13 @@ spec:
         app: ollama
     spec:
       containers:
+        command: ["/bin/sh", "-c"]
+        args:
+          - |
+            ollama serve &
+            sleep 2 &&
+            ollama pull deepseek-r1:1.5b &&
+            tail -f /dev/null
         image: ollama/ollama:latest
         name: ollama
         ports:
