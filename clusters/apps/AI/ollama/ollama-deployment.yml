@@ -40,6 +40,8 @@ spec:
         - name: ollama-claim0
           mountPath: /root/.ollama
         tty: true
+      nodeSelector:
+        webui: deepseek
       volumes:
         - name: ollama-claim0
           persistentVolumeClaim:
