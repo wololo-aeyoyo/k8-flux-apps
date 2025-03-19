@@ -40,7 +40,7 @@ spec:
             - mountPath: /root/.ollama
               name: ollama-claim0
       nodeSelector:
-        deploygame: deepseek
+        webui : deepseek
       restartPolicy: Always
       volumes:
         - name: ollama-claim0
