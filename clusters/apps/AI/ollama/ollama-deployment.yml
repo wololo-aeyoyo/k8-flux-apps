@@ -25,7 +25,7 @@ spec:
         name: ollama
         ports:
         - name: http
-        - containerPort: 11434
+          containerPort: 11434
           protocol: TCP
         resources:
           requests:
