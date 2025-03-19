@@ -24,7 +24,7 @@ spec:
           - name: OLLAMA_SYSTEM_PROMPT
             value: "You are DeepSeek-R1, a reasoning model. Provide direct answers without detailed reasoning steps or tags."
           - name : OLLAMA_ORIGINS 
-            value: "web-ui.local.wololoaeyoyo.com"
+            value: "https://web-ui.local.wololoaeyoyo.com"
           image: ollama/ollama:latest
           name: ollama
           ports:
