@@ -1,0 +1,9 @@
+resources:
+  - AI/ollama/ollama-deployment.yml
+  - AI/ollama/ollama-service.yml
+  - AI/ollama/ollama-vpc.yml
+  - AI/web-ui/web-ui-deployment.yml
+  - AI/web-ui/web-ui-ingress.yml
+  - AI/web-ui/web-ui-namespace.yml
+  - AI/web-ui/web-ui-service.yml
+  - AI/web-ui/web-ui-vpc.yml
