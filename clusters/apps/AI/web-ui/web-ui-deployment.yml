@@ -4,7 +4,7 @@ metadata:
   name: web-ui
   namespace: web-ui
 spec:
-  replicas: 0
+  replicas: 1
   selector:
     matchLabels:
       name: web-ui
