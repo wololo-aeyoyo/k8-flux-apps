@@ -51,6 +51,6 @@ spec:
       nodeSelector:
         grafana: grafana
       volumes:
-        - name: grafana-pv
+        - name: grafana-pvc
           persistentVolumeClaim:
             claimName: grafana-pvc
