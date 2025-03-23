@@ -23,9 +23,6 @@ spec:
         - name: http
           containerPort: 3000
           protocol: TCP
-        volumeMounts:
-          - mountPath: /var/lib/grafana
-            name: grafana-pvc
         readinessProbe:
           failureThreshold: 3
           httpGet:
@@ -48,6 +45,9 @@ spec:
           requests:
             cpu: 250m
             memory: 750Mi
+      volumeMounts:
+        - mountPath: /var/lib/grafana
+          name: grafana-pvc
       nodeSelector:
         grafana: grafana
       volumes:
