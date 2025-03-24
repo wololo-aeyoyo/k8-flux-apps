@@ -40,7 +40,7 @@ spec:
             - name: REPLACE_ENV_VARIABLES
               value: "true"
             - name: TYPE
-              value: FORGE
+              value: AUTO_CURSEFORGE
             - name: VERSION
               value: 1.20.1
             - name: FORGE_VERSION
