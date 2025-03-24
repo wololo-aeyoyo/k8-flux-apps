@@ -55,7 +55,7 @@ spec:
             - name: CF_FILE_ID
               value: "6328403"
             - name: CF_EXCLUDE_MODS
-              value: particle_effects             
+              value: "particle_effects"             
           image: itzg/minecraft-server
           name: fabric
           ports:
