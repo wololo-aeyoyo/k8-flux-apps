@@ -53,7 +53,7 @@ spec:
             - name: CF_SLUG
               value: better-mc-forge-bmc4 
             - name: CF_FILE_ID
-              value: "6328453"             
+              value: "6328403"             
           image: itzg/minecraft-server
           name: fabric
           ports:
