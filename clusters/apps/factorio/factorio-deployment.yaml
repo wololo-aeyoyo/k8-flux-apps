@@ -6,7 +6,7 @@ metadata:
     io.kompose.service: factorio
   name: factorio
 spec:
-  replicas: 1
+  replicas: 0
   selector:
     matchLabels:
       io.kompose.service: factorio

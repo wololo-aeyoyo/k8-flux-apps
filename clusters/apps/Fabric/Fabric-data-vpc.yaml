@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  namespace: default
+  labels:
+    io.kompose.service: fabric-data-vpc
+  name: fabric-data-vpc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 2000Mi
