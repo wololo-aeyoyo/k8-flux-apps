@@ -62,8 +62,6 @@ spec:
           volumeMounts:
             - mountPath: /data
               name: fabric-data-vpc
-            - mountPath: /mods
-              name: fabric-data-vpc
       nodeSelector:
         server: fabric
       restartPolicy: Always
