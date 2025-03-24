@@ -53,7 +53,9 @@ spec:
             - name: CF_SLUG
               value: better-mc-forge-bmc4 
             - name: CF_FILE_ID
-              value: "6328403"             
+              value: "6328403"
+            - name: CF_EXCLUDE_MODS
+              value: particle_effects             
           image: itzg/minecraft-server
           name: fabric
           ports:
