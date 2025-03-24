@@ -50,8 +50,6 @@ spec:
                 secretKeyRef:
                   name: cursegore-api-key
                   key: api-key
-            - name: MODPACK_PLATFORM
-              value: "curseforge"
             - name: CF_PAGE_URL
               value: https://www.curseforge.com/minecraft/modpacks/better-mc-forge-bmc4/files/6328453             
           image: itzg/minecraft-server
