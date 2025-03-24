@@ -60,11 +60,9 @@ spec:
             - containerPort: 19132
               protocol: UDP
           volumeMounts:
-            - mountPath: /config/config.yml
-              name: fabric-data-vpc
-            - mountPath: /server
-              name: fabric-data-vpc
             - mountPath: /data
+              name: fabric-data-vpc
+            - mountPath: /mods
               name: fabric-data-vpc
       nodeSelector:
         server: fabric
