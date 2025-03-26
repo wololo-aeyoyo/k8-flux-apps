@@ -34,7 +34,7 @@ spec:
             - name: CFG_MOTD
               value: Powered by Docker
             - name: MAX_MEMORY
-              value: 8G
+              value: 11G
             - name: MEMORY
               value: 5G
             - name: REPLACE_ENV_VARIABLES
