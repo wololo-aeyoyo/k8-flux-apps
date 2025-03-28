@@ -6,6 +6,13 @@ metadata:
   labels:
     name: elastic-system
 ---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: elastic
+  labels:
+    name: elastic
+---
 # Source: eck-operator/templates/service-account.yaml
 apiVersion: v1
 kind: ServiceAccount
