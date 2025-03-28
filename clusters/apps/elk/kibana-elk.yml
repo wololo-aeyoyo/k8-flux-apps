@@ -10,7 +10,7 @@ spec:
   elasticsearchRef:
     name: elasticsearch
   config:
-    server.publicBaseUrl: https://kibana.local.wololoaeyoyo.com
+  #  server.publicBaseUrl: https://kibana.local.wololoaeyoyo.com
     xpack.fleet.agents.elasticsearch.hosts: ["https://elasticsearch-es-http.elastic:9200"]
     xpack.fleet.agents.fleet_server.hosts: ["https://fleet-server-agent-http.elastic:8220"]
     # xpack.security.http.ssl.enabled: "false" # Disable SSL for testing purposes, set to "true" in production
