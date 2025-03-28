@@ -6,7 +6,7 @@ metadata:
 spec:
   version: 8.16.0
   nodeSets:
-  - name: elastic
+  - name: default
     count: 3
     config:
       node.store.allow_mmap: false
