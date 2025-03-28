@@ -5,6 +5,14 @@ metadata:
   namespace: elastic
 spec:
   version: 8.16.0
+  http:
+    service:
+      spec:
+        type: ClusterIP
+    tls:
+      selfSignedCertificate:
+        subjectAltNames:
+          - dns: elasticsearch-es-http.elastic
   nodeSets:
   - name: elastic
     count: 3
