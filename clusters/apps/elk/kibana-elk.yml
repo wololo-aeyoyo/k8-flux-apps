@@ -14,6 +14,7 @@ spec:
     xpack.fleet.agents.elasticsearch.hosts: ["https://elasticsearch-es-http.elastic:9200"]
     xpack.fleet.agents.fleet_server.hosts: ["https://fleet-server-agent-http.elastic:8220"]
     # xpack.security.http.ssl.enabled: "false" # Disable SSL for testing purposes, set to "true" in production
+    xpack.security.enabled: false # Disable security for testing purposes, set to "true" in production
     xpack.fleet.packages:
       - name: system
         version: latest
