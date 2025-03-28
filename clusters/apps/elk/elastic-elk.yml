@@ -3,14 +3,8 @@ kind: Elasticsearch
 metadata:
   name: elasticsearch
   namespace: elastic
-  annotations: 
-    kubernetes.io/ingress.class: traefik-external
 spec:
   version: 8.16.0
-  transport:
-    tls:
-      certificate:
-        secretName: local-wololoaeyoyo-com-tls
   nodeSets:
   - name: elastic
     count: 3
