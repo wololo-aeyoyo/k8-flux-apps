@@ -1,0 +1,57 @@
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: elastic-route
+  namespace: elastic
+  annotations: 
+    kubernetes.io/ingress.class: traefik-external
+spec:
+  entryPoints:
+    - websecure 
+  routes:
+    - kind: Rule
+      match: Host(`elastic.local.wololoaeyoyo.com`)
+      services:
+        - name: elastic 
+          port: 9200
+  tls:
+    secretName: local-wololoaeyoyo-com-tls
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: kibana-route
+#  namespace: elastic
+  annotations: 
+    kubernetes.io/ingress.class: traefik-external
+spec:
+  entryPoints:
+    - websecure 
+  routes:
+    - kind: Rule
+      match: Host(`kibana.local.wololoaeyoyo.com`)
+      services:
+        - name: kibana 
+          port: 5601
+  tls:
+    secretName: local-wololoaeyoyo-com-tls
+---
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: fleet-agent-route
+#  namespace: elastic
+  annotations: 
+    kubernetes.io/ingress.class: traefik-external
+spec:
+  entryPoints:
+    - websecure 
+  routes:
+    - kind: Rule
+      match: Host(`fleet-agent.local.wololoaeyoyo.com`)
+      services:
+        - name: fleet-agent 
+          port: 8220
+  tls:
+    secretName: local-wololoaeyoyo-com-tls
