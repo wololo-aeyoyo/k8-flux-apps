@@ -12,7 +12,7 @@ spec:
     tls:
       selfSignedCertificate:
         subjectAltNames:
-          - dns: elasticsearch-es-http.elastic
+          - dns: elastic.local.wololoaeyoyo.com
   nodeSets:
   - name: elastic
     count: 3
