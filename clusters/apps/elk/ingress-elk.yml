@@ -12,7 +12,7 @@ spec:
     - kind: Rule
       match: Host(`elastic.local.wololoaeyoyo.com`)
       services:
-        - name: elastic 
+        - name: elasticsearch-es-http 
           port: 9200
   tls:
     secretName: local-wololoaeyoyo-com-tls
@@ -31,11 +31,10 @@ spec:
     - kind: Rule
       match: Host(`kibana.local.wololoaeyoyo.com`)
       services:
-        - name: kibana 
+        - name: kibana-kb-http 
           port: 5601
   tls:
     secretName: local-wololoaeyoyo-com-tls
----
 ---
 apiVersion: traefik.io/v1alpha1
 kind: IngressRoute
@@ -51,7 +50,7 @@ spec:
     - kind: Rule
       match: Host(`fleet-agent.local.wololoaeyoyo.com`)
       services:
-        - name: fleet-agent 
+        - name: fleet-server-agent-http 
           port: 8220
   tls:
     secretName: local-wololoaeyoyo-com-tls
