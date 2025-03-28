@@ -12,7 +12,7 @@ spec:
     - kind: Rule
       match: Host(`elastic.local.wololoaeyoyo.com`)
       services:
-        - name: elasticsearch-es-http 
+        - name: elasticsearch-es-internal-http
           port: 9200
   tls:
     secretName: local-wololoaeyoyo-com-tls
