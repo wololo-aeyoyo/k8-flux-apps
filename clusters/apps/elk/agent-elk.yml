@@ -11,7 +11,6 @@ spec:
   kibanaRef:
     name: kibana
     namespace: elastic
-
   elasticsearchRefs:
   - name: elasticsearch
     namespace: elastic
@@ -31,12 +30,15 @@ apiVersion: agent.k8s.elastic.co/v1alpha1
 kind: Agent
 metadata: 
   name: elastic-agent
+  namespace: elastic
 spec:
   version: 8.16.0
   kibanaRef:
     name: kibana
+    namespace: elastic
   fleetServerRef: 
     name: fleet-server
+    namespace: elastic
   mode: fleet
   policyID: eck-agent
   daemonSet:
