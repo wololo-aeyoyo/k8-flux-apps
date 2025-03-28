@@ -5,8 +5,12 @@ metadata:
   namespace: elastic
 spec:
   version: 8.16.0
+  transport:
+    tls:
+      certificate:
+        secretName: local-wololoaeyoyo-com-tls
   nodeSets:
-  - name: default
+  - name: elastic
     count: 3
     config:
       node.store.allow_mmap: false
