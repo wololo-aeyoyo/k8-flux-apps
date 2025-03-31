@@ -19,6 +19,7 @@ data:
   MOD_IDS: REORDER_THE_HOTBAR;VISIBLE_BACKPACK_BACKGROUND;REORDER_CONTAINERS;BION_PlainMoodles;ModManagerServer;ModManager;P4HasBeenRead;Skizots Visible Boxes and Garbage2;FancyHandwork;Vanilla_Tiles_Enhanced;modoptions;VanillaVehiclesAnimated;VOICE_FRAMEWORK;PlayersOnMap;SkillRecoveryJournal
 kind: ConfigMap
 metadata:
+  namespace: default
   labels:
     io.kompose.service: projectzomboiddedicatedserver-env
   name: env
