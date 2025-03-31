@@ -123,8 +123,9 @@ spec:
             - mountPath: /home
               name: zomboide-vpc
       restartPolicy: Always
+      nodeSelector:
+        zomboide: zomboide
       volumes:
-
         - name: zomboide-vpc
           persistentVolumeClaim:
             claimName: zomboide-vpc
