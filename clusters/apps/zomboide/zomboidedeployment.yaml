@@ -1,0 +1,130 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: C:\kompose\kompose.exe convert
+    kompose.version: 1.34.0 (cbf2835db)
+  labels:
+    io.kompose.service: projectzomboiddedicatedserver
+  name: projectzomboiddedicatedserver
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: projectzomboiddedicatedserver
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: C:\kompose\kompose.exe convert
+        kompose.version: 1.34.0 (cbf2835db)
+      labels:
+        io.kompose.service: projectzomboiddedicatedserver
+    spec:
+      nodeName: worker-wololo-4
+      containers:
+        - env:
+            - name: ADMINPASSWORD
+              valueFrom:
+                configMapKeyRef:
+                  key: ADMINPASSWORD
+                  name: env
+            - name: CACHEDIR
+              valueFrom:
+                configMapKeyRef:
+                  key: CACHEDIR
+                  name: env
+            - name: DEBUG
+              valueFrom:
+                configMapKeyRef:
+                  key: DEBUG
+                  name: env
+            - name: FORCEUPDATE
+              valueFrom:
+                configMapKeyRef:
+                  key: FORCEUPDATE
+                  name: env
+            - name: IP
+              valueFrom:
+                configMapKeyRef:
+                  key: IP
+                  name: env
+            - name: MEMORY
+              valueFrom:
+                configMapKeyRef:
+                  key: MEMORY
+                  name: env
+            - name: MODFOLDERS
+              valueFrom:
+                configMapKeyRef:
+                  key: MODFOLDERS
+                  name: env
+            - name: MOD_IDS
+              valueFrom:
+                configMapKeyRef:
+                  key: MOD_IDS
+                  name: env
+            - name: NOSTEAM
+              valueFrom:
+                configMapKeyRef:
+                  key: NOSTEAM
+                  name: env
+            - name: PORT
+              valueFrom:
+                configMapKeyRef:
+                  key: PORT
+                  name: env
+            - name: SERVERNAME
+              valueFrom:
+                configMapKeyRef:
+                  key: SERVERNAME
+                  name: env
+            - name: SERVERPRESET
+              valueFrom:
+                configMapKeyRef:
+                  key: SERVERPRESET
+                  name: env
+            - name: SOFTRESET
+              valueFrom:
+                configMapKeyRef:
+                  key: SOFTRESET
+                  name: env
+            - name: STEAMPORT1
+              valueFrom:
+                configMapKeyRef:
+                  key: STEAMPORT1
+                  name: env
+            - name: STEAMPORT2
+              valueFrom:
+                configMapKeyRef:
+                  key: STEAMPORT2
+                  name: env
+            - name: STEAMVAC
+              valueFrom:
+                configMapKeyRef:
+                  key: STEAMVAC
+                  name: env
+            - name: WORKSHOP_IDS
+              valueFrom:
+                configMapKeyRef:
+                  key: WORKSHOP_IDS
+                  name: env
+          image: danixu86/project-zomboid-dedicated-server:latest
+          name: projectzomboiddedicatedserver
+          ports:
+            - containerPort: 16261
+              protocol: UDP
+            - containerPort: 16262
+              protocol: UDP
+            - containerPort: 27015
+              protocol: TCP
+          volumeMounts:
+            - mountPath: /home
+              name: zomboide-vpc
+      restartPolicy: Always
+      volumes:
+
+        - name: zomboide-vpc
+          persistentVolumeClaim:
+            claimName: zomboide-vpc
