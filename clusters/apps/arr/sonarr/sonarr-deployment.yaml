@@ -51,7 +51,7 @@ spec:
             - containerPort: 8989
               protocol: TCP
           volumeMounts:
-            - mountPath: /data/config
+            - mountPath: /config
               name: arr-claim0
             - mountPath: /data/downloads
               name: arr-claim0
