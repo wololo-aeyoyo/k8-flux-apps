@@ -52,7 +52,7 @@ spec:
               protocol: TCP
           volumeMounts:
             - mountPath: /config
-              name: arr-claim0
+              name: arr-claim2
             - mountPath: /data/downloads
               name: arr-claim0
             - mountPath: /data/downloads/tvshows
@@ -65,5 +65,7 @@ spec:
         - name: arr-claim0
           persistentVolumeClaim:
             claimName: arr-claim0
-
+        - name: arr-claim2
+          persistentVolumeClaim:
+            claimName: arr-claim2
 

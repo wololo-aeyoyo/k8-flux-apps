@@ -27,6 +27,21 @@ spec:
   resources:
     requests:
       storage: 1500Mi
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  namespace: arr-stack 
+  labels:
+    io.kompose.service: arr-claim2
+  name: arr-claim2
+spec:
+  storageClassName: longhorn
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 1500Mi
 
 
 
