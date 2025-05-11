@@ -41,9 +41,10 @@ spec:
               name: arr-claim0
             - mountPath: /data/downloads
               name: arr-claim0
-            - mountPath: /data/downloads/movies
+            - mountPath: /data/movies
               name: arr-claim0
-
+      nodeSelector:
+        Arr: arr
       restartPolicy: Always
       volumes:
         - name: arr-claim0

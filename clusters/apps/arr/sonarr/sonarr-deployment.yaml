@@ -55,12 +55,14 @@ spec:
               name: arr-claim2
             - mountPath: /data/downloads
               name: arr-claim0
-            - mountPath: /data/downloads/tvshows
+            - mountPath: /data/tvshows
               name: arr-claim0
-            - mountPath: /data/downloads/anime
+            - mountPath: /data/anime
               name: arr-claim0
       hostname: sonarr
       restartPolicy: Always
+      nodeSelector:
+        Arr: arr
       volumes:
         - name: arr-claim0
           persistentVolumeClaim:

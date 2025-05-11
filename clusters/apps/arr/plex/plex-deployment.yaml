@@ -47,6 +47,8 @@ spec:
               name: arr-claim0
             - mountPath: /config
               name: arr-claim0
+      nodeSelector:
+        Arr: arr
       restartPolicy: Always
       volumes:
         - name: arr-claim0

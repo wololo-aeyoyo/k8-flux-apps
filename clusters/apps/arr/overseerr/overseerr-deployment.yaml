@@ -35,6 +35,12 @@ spec:
               name: arr-claim0
             - mountPath: /data/downloads
               name: arr-claim0
+            - mountPath: /data/anime
+              name: arr-claim0
+            - mountPath: /data/tvshows
+              name: arr-claim0
+            - mountPath: /data/movies
+              name: arr-claim0
       restartPolicy: Always
       volumes:
         - name: arr-claim0
