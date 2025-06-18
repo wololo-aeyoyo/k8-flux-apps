@@ -48,6 +48,8 @@ spec:
       volumeMounts:
         - mountPath: /var/lib/grafana
           name: grafana-pvc
+        - mountPath: /usr/share/grafana
+          name: grafana-pvc
       nodeSelector:
         grafana: grafana
       volumes:
