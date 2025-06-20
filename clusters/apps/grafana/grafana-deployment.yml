@@ -18,7 +18,10 @@ spec:
     replicaCount: 1
     plugins:
     - grafana-github-datasource
-    volumes:
-      - name: grafana-pvc
-        persistentVolumeClaim:
-          claimName: grafana-pvc
+    persistence:
+      type: pvc
+      enabled: true
+      storageClassName: longhorn
+    ingress:
+    enabled: false
+    ingressClassName: traefik-external
