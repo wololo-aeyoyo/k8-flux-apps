@@ -22,16 +22,6 @@ spec:
       type: pvc
       enabled: true
       storageClassName: longhorn
-    ingress:
-    enabled: true
-    ingressClassName: traefik-external
-    entryPoints:
-      - websecure 
-    routes:
-      - kind: Rule
-        match: Host(`grafana.local.wololoaeyoyo.com`)
-        services:
-          - name: grafana 
-            port: 3000
-    tls:
-      secretName: local-wololoaeyoyo-com-tls
+      accessModes:
+      - ReadWriteOnce
+    size: 1Gi
