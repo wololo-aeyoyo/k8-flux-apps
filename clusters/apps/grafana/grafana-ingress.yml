@@ -12,7 +12,7 @@ spec:
     - kind: Rule
       match: Host(`grafana.local.wololoaeyoyo.com`)
       services:
-        - name: grafana 
+        - name: grafana-grafana 
           port: 3000
   tls:
     secretName: local-wololoaeyoyo-com-tls
