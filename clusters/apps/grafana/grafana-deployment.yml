@@ -1,5 +1,5 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
 metadata:
   labels:
     app: grafana
@@ -15,10 +15,14 @@ spec:
       labels:
         name: grafana
     spec:
+      chart: grafana
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: grafana-helm
+      version: 8.8.4
       containers:
       - env:
-        name: grafana
-        image: grafana/grafana:latest
         ports:
         - name: http
           containerPort: 3000
