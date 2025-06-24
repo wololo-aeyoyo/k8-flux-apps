@@ -13,5 +13,6 @@ spec:
     - name: "32400"
       port: 32400
       targetPort: 32400
+  type: LoadBalancer
   selector:
     io.kompose.service: plex
