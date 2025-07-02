@@ -1,0 +1,18 @@
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: loki-route
+  namespace: loki
+  annotations: 
+    kubernetes.io/ingress.class: traefik-external
+spec:
+  entryPoints:
+    - websecure 
+  routes:
+    - kind: Rule
+      match: Host(`loki.local.wololoaeyoyo.com`)
+      services:
+        - name: loki-loki 
+          port: 3100
+  tls:
+    secretName: local-wololoaeyoyo-com-tls
