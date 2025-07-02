@@ -1,3 +1,6 @@
+metadata:
+  name: loki
+  namespace: loki 
 ---
 loki:
   schemaConfig:
