@@ -12,7 +12,7 @@ spec:
     - kind: Rule
       match: Host(`loki.local.wololoaeyoyo.com`)
       services:
-        - name: loki-loki 
+        - name: loki-backend
           port: 3100
   tls:
     secretName: local-wololoaeyoyo-com-tls
