@@ -3,7 +3,6 @@ kind: HelmRelease
 metadata:
   name: loki
   namespace: loki
-  description: Helm chart for Grafana Loki and Grafana Enterprise Logs supporting monolithic, simple scalable, and microservices modes.
 spec:
   targetNamespace: loki 
   chart:
