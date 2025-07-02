@@ -1,4 +1,5 @@
-apiVersion: v2
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
 name: loki
 description: Helm chart for Grafana Loki and Grafana Enterprise Logs supporting monolithic, simple scalable, and microservices modes.
 type: application
