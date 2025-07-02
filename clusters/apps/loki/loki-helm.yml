@@ -7,13 +7,13 @@ spec:
   targetNamespace: loki 
   chart:
     spec:
-      chart: loki-stack
+      chart: loki
       reconcileStrategy: ChartVersion
       sourceRef:
         kind: HelmRepository
         name: grafana-helm
         namespace: grafana
-      version: 2.10.1
+      version: 3.5.1
   interval: 1m0s
   valuesFrom:
     - kind: ConfigMap
