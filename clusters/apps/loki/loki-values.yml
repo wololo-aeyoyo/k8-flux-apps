@@ -41,6 +41,15 @@ data:
     write:
       replicas: 3
 
+    # Enable Promtail for log collection  
+    promtail:
+      enabled: true
+      config:
+        logLevel: info
+        serverPort: 3101
+        clients:
+      - url: http://loki-gateway/loki/api/v1/push
+
     # Enable minio for storage
     minio:
       enabled: true
@@ -67,10 +76,4 @@ data:
       replicas: 0
     bloomGateway:
       replicas: 0
-    promtail:
-      enabled: true
-      config:
-        logLevel: info
-        serverPort: 3101
-        clients:
-      - url: http://loki-gateway/loki/api/v1/push
+
