@@ -23,7 +23,13 @@ data:
       querier:
         # Default is 4, if you have enough memory and CPU you can increase, reduce if OOMing
         max_concurrent: 4
-
+      persistence:
+        type: pvc
+        enabled: true
+        storageClassName: longhorn
+        accessModes:
+          - ReadWriteOnce
+        size: 5Gi
     #gateway:
     #  ingress:
     #    enabled: true
