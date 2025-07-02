@@ -13,7 +13,8 @@ spec:
         kind: HelmRepository
         name: grafana-helm
         namespace: grafana
-      version: 3.5.1
+      version: 6.30.1
+
   interval: 1m0s
   valuesFrom:
     - kind: ConfigMap
