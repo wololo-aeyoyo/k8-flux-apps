@@ -1,5 +1,5 @@
 metadata:
-  name: loki
+  name: loki-values
   namespace: loki 
 loki:
   schemaConfig:
