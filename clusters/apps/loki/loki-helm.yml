@@ -13,5 +13,5 @@ spec:
         kind: HelmRepository
         name: grafana-helm
         namespace: grafana
-      version: 3.5.0
+      version: 3.5
   interval: 1m0s
