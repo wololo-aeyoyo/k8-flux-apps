@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: alloy-values
+  namespace: alloy
+data:
+  values.yaml: |
+    alloy:
+      configMap:
+        content: |-
+          // Write your Alloy config here:
+          logging {
+            level = "debug"
+            format = "logfmt"
+          } 
