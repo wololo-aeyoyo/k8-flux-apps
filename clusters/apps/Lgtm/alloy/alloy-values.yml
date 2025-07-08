@@ -73,7 +73,7 @@ data:
           }
           loki.write "loki" {
             endpoint {
-              url = "http://loki-loki-gateway.loki.svc.cluster.local/loki/api/v1/push"
+              url = "http://loki-loki-gateway.loki.svc.cluster.local:3100/loki/api/v1/push"
             }
           }
       mounts:
