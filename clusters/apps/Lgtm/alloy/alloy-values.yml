@@ -13,7 +13,6 @@ data:
             level = "debug"
             format = "logfmt"
           } 
-      }
           discovery.kubernetes "pods" {
             role = "pod"
           }
