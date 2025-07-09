@@ -6,8 +6,6 @@ metadata:
 data:
   values.yaml: |
     alloy:
-      listenAddr: "0.0.0.0"
-      listenPort: 12345
       configMap:
         content: |-      
           logging {
