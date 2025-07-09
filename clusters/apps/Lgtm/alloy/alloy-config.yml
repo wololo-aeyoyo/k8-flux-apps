@@ -2,37 +2,34 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: alloy-config
-  namespace: alloy
-  labels:
-    app.kubernetes.io/name: alloy
+  namespace: alloy  # Make sure this matches the HelmRelease namespace
 data:
-  alloy-config.alloy: |
-    logging {
-      level  = "info"
-      format = "logfmt"
-    }
+  values.yaml: |
+    alloy:
+      configMap:
+        content: |-
+          logging {
+            level  = "info"
+            format = "logfmt"
+          }
 
-    discovery.kubernetes "pods" {
-      role = "pod"
-    }
+          discovery.kubernetes "pods" {
+            role = "pod"
+          }
 
-    loki.source.kubernetes "logs" {
-      targets = discovery.kubernetes.pods.targets
+          loki.source.kubernetes "logs" {
+            targets = discovery.kubernetes.pods.targets
+            forward_to = [loki.write.k8s.endpoint]
 
-      forward_to = [loki.write.k8s.endpoint]
+            [labels]
+            job       = "kubernetes-pods"
+            namespace = "${__meta_kubernetes_namespace}"
+            pod       = "${__meta_kubernetes_pod_name}"
+            container = "${__meta_kubernetes_pod_container_name}"
+          }
 
-      [labels]
-      job       = "kubernetes-pods"
-      namespace = "${__meta_kubernetes_namespace}"
-      pod       = "${__meta_kubernetes_pod_name}"
-      container = "${__meta_kubernetes_pod_container_name}"
-    }
-
-    loki.write "k8s" {
-      endpoint {
-        url = "http://loki-loki-gateway.loki.svc.cluster.local/loki/api/v1/push"
-      }
-    }
-
-
-
+          loki.write "k8s" {
+            endpoint {
+              url = "http://loki-loki-gateway.loki.svc.cluster.local/loki/api/v1/push"
+            }
+          }
