@@ -75,6 +75,9 @@ data:
               url = "http://loki-loki-gateway.loki.svc.cluster.local/loki/api/v1/push"
             }
           }
+          http {
+            listen_address = "127.0.0.1:12345"
+          }
       mounts:
         varlog: true
         dockercontainers: true
@@ -86,7 +89,3 @@ data:
         requests:
           cpu: 100m
           memory: 128Mi
-
-
-
-
