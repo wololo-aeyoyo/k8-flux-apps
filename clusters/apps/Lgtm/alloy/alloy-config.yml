@@ -6,6 +6,8 @@ metadata:
 data:
   values.yaml: |
     alloy:
+      listenAddr: "0.0.0.0"
+      listenPort: 12345
       configMap:
         content: |-      
           logging {
@@ -75,9 +77,7 @@ data:
               url = "http://loki-loki-gateway.loki.svc.cluster.local/loki/api/v1/push"
             }
           }
-          http {
-            listen_address = "0.0.0.0:12345"
-          }
+
       mounts:
         varlog: true
         dockercontainers: true
