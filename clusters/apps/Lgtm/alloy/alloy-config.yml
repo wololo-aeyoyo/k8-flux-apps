@@ -76,7 +76,7 @@ data:
             }
           }
           http {
-            listen_address = "127.0.0.1:12345"
+            listen_address = "0.0.0.0:12345"
           }
       mounts:
         varlog: true
