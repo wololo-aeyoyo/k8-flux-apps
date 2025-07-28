@@ -23,7 +23,7 @@ spec:
       labels:
         io.kompose.service: projectzomboiddedicatedserver
     spec:
-      nodeName: worker-wololo-4
+      nodeName: worker-wololo-1
       containers:
         - env:
             - name: ADMINPASSWORD
